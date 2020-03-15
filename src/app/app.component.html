@@ -1,0 +1,25 @@
+<!-- <div *ngFor="let post of postsArray">
+    <p>{{ post.title}}{{ post.body }}</p>
+
+</div> -->
+<ul>
+    <li *ngFor="let post of postsArray">
+        <p>{{ post.title}}</p>
+        <p>{{ post.body }}</p>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <span>Title: </span> <input type="text" #postTitle>
+        <span>  Body: </span> <input type="text" #postBody>
+        <button (click)="addPost()">Add Post</button>
+    </li>
+    <li>
+        <span>Id: </span><input type="text" #postId>
+        <button (click)="putPost()">Put Post</button>
+    </li>
+</ul>
+
+<router-outlet>
+</router-outlet>
